@@ -1,0 +1,13 @@
+psql -d opendata_ve_pg -f fn_dequa_similarity.sql;
+psql -d opendata_ve_pg -f fn_getplaces_address.sql;
+psql -d opendata_ve_pg -f fn_getplaces_neighborhood.sql;
+psql -d opendata_ve_pg -f fn_getplaces_poi.sql;
+psql -d opendata_ve_pg -f fn_getplaces.sql;
+psql -d opendata_ve_pg -f fn_getplaces_street.sql;
+psql -d opendata_ve_pg -f fn_getsuggest_address.sql;
+psql -d opendata_ve_pg -f fn_getsuggest_neighborhood.sql;
+psql -d opendata_ve_pg -f fn_getsuggest_poi2.sql;
+psql -d opendata_ve_pg -f fn_getsuggest_poi.sql;
+psql -d opendata_ve_pg -f fn_getsuggest.sql;
+psql -d opendata_ve_pg -f fn_getsuggest_street.sql;
+psql -d opendata_ve_pg -f fn_getsuggest_test.sql;
