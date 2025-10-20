@@ -1,0 +1,28 @@
+services:
+  database:
+    # Official Postgres image from DockerHub (we use the last version)
+    image: postgis/postgis:14-3.4-alpine
+    
+    container_name: dq_postgres
+    restart: unless-stopped
+
+    env_file:
+      - .env
+
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+    expose:
+      - 5432
+    
+    volumes:
+      - ./utils/init_dbs.sql:/docker-entrypoint-initdb.d/init_dbs.sql
+      - ./functions:/functions
+
+networks:
+  default:
+    name: dequa_nw
+    external: true
