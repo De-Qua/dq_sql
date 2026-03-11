@@ -11,3 +11,6 @@ psql -d opendata_ve_pg -f fn_getsuggest_poi.sql;
 psql -d opendata_ve_pg -f fn_getsuggest.sql;
 psql -d opendata_ve_pg -f fn_getsuggest_street.sql;
 psql -d opendata_ve_pg -f fn_getsuggest_test.sql;
+psql -d opendata_ve_pg -f dq_getnearbyaddresses.sql;
+psql -d opendata_ve_pg -f dq_getnearbystreets.sql;
+psql -d opendata_ve_pg -f dq_getnearbyitems.sql;
