@@ -20,7 +20,16 @@ It will automatically create the databases with postgis extensions in some of th
 ```
 flask db upgrade
 ```
-It will create all the tables and relationships
+Or if the backend is the containerized docker version
+```
+docker compose run --rm dq_backend flask db upgrade
+```
+Or if in development with multiple yml files
+```
+docker compose -f docker-compose.yml -f docker-compose.dev.yml run --rm dq_backend flask db upgrade
+```
+
+This will create all the tables and relationships
 
 3. From the db folder restore all the data
 ```
