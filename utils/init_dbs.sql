@@ -23,6 +23,9 @@ CREATE EXTENSION IF NOT EXISTS pg_trgm;
 \i /functions/fn_getsuggest.sql
 \i /functions/fn_getsuggest_street.sql
 \i /functions/fn_getsuggest_test.sql
+\i /functions/dq_getnearbyaddresses.sql
+\i /functions/dq_getnearbyitems.sql
+\i /functions/dq_getnearbystreets.sql
 
 \connect dequa_geotag;
 CREATE EXTENSION IF NOT EXISTS postgis;
