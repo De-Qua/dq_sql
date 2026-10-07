@@ -23,6 +23,13 @@ services:
     volumes:
       - ./utils/init_dbs.sql:/docker-entrypoint-initdb.d/init_dbs.sql
       - ./functions:/functions
+    
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
+        compress: "true"
 
 networks:
   default:
